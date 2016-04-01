@@ -14,6 +14,7 @@ body
   color $colorBaseBody
   width 100%
   height 100%
+  overflow-x hidden
   
 .fade-in-page
   animation fade-in ease-in 2s both
@@ -37,19 +38,72 @@ h2
   line-height 1em
   font-size 3em
   color #fff
+  font-weight normal
 
 h2 strong
   font-family $fontBaseBold
   
-.wrapper
+.wrapper, footer
   position relative
   width 100%
   height 100%
   height 100vh
   display block
+  padding-top 5em
+  
+.avise-me
+  width 100%
+  max-width 870px
+  min-width 320px
+  margin 0 auto
+  position relative
+  z-index 2
+  & fieldset
+    padding 0
+  & legend
+    color #fff
+    font-size 1.250em
+  & input
+    border 1px solid #fff
+    border-radius 23px
+    background none
+    color #fff
+    padding 10px
+    width 40%
+    
+  & .btn-enviar
+    background #fff
+    color #13da96
+    border-radius 23px
+    padding 7px
+    border none
+    width 18%
+    font-size 1.438em
+    font-weight bold
+  
+.hand 
+  position absolute
+  right 0
+  top 13%
+  z-index 1  
+  max-width 568px
+  width 100%
+  min-height auto
 
-@css {
-  .wrapper {
+.simples
+  padding 3em 0 3em 0
+  text-align center
+  & h2
+    color #4d4d4d
+    font-size 2.375em
+    font-weight normal
+  & p
+    font-size 1.438em
+    padding 1em
+    
+
+@css{
+  .wrapper, footer {
     background: rgba(11,229,102,1);
     background: -moz-linear-gradient(left, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(11,229,102,1)), color-stop(1%, rgba(11,229,102,1)), color-stop(56%, rgba(19,217,164,1)), color-stop(100%, rgba(3,234,255,1)));
@@ -59,23 +113,109 @@ h2 strong
     background: linear-gradient(to right, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be566', endColorstr='#03eaff', GradientType=1 );
   }
+  
+  .step-app {
+    background: rgba(243,243,243,1);
+    background: -moz-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 1%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(243,243,243,1)), color-stop(1%, rgba(243,243,243,1)), color-stop(19%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 1%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 1%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 1%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(243,243,243,1) 0%, rgba(243,243,243,1) 1%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#ffffff', GradientType=0 );
+  }
+  
+  .avise-me ::-webkit-input-placeholder { color: #fff; opacity: 1 !important; }
+  .avise-me :-moz-placeholder { color: #fff;}
+  .avise-me ::-moz-placeholder {color: #fff;}
+  .avise-me :-ms-input-placeholder {color: #fff;}
 }
 
-section
-  width 100%
-  max-width 870px
-  min-width 320px
-  margin 0 auto
-  position relative
-  border 1px solid red
-
-
-
-
-
-
-
-
+.step-app
+  padding 50px 0 40px 0
+  
+  & div
+    width 33.333%
+    float left
+    text-align center
+    padding 10px
+    
+    & .icons
+      margin 0
+      display block
+      position relative
+      left 50%
+      line-height 0
+      overflow hidden
+      text-indent 100%
+      white-space nowrap
+      width 67px
+      height 67px
+      margin-left: -33.5px;
+      
+    & .icons:before
+      content ''
+      display block
+      float left
+      
+    & .icons:after
+      content ''
+      display block
+      background-size cover
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right 0
+      
+    & .icon-location
+      background url(../images/icon_location.png) no-repeat
+    
+    & .icon-checked
+      background url(../images/icon_checked.png) no-repeat
+      
+    & .icon-chat
+      background url(../images/icon_chat.png) no-repeat
+      
+  & .mockup
+    display block
+    margin 0 auto
+    max-width 800px
+    width 100%
+    min-height auto
+      
+footer
+  padding 3em 0 4em 0
+  height 50%
+  
+  & h1
+    display block
+    margin 0 auto
+    width 94px
+  
+  & legend
+    text-align center
+    color #fff
+    font-size 1.500em
+    padding 25px 0 25px 0
+  
+  & input
+    width 75.515625%
+    background #fff
+    border-radius 2px
+    border none
+    padding 10px
+  
+  & .btn-enviar
+    background #4d4d4d
+    color #fff
+    border-radius 2px
+    padding 10px
+    border none
+    width 23%
+  & div
+    width 50%
+    margin 0 auto
 
 
 
