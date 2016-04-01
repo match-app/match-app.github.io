@@ -1,6 +1,7 @@
 @import 'nib'
 
-$fontBaseLight = 'ubuntulight', Arial;
+$fontBaseLight = 'robotolight', Arial;
+$fontBaseBold = 'robotobold', Arial;
 $colorBaseBody = #757a83
 
 .clearfix
@@ -11,7 +12,6 @@ body
   font-smoothing(antialiased)
   font-size 1em
   color $colorBaseBody
-  background #000
   width 100%
   height 100%
   
@@ -30,13 +30,56 @@ body
 li
   list-style none
   
-h1
-  margin 0 auto
-  width 253px
+h1 img
+ width 92px
   
 h2
-  text-align center
-  font-size 1.063em
-  text-transform uppercase
+  line-height 1em
+  font-size 3em
+  color #fff
+
+h2 strong
+  font-family $fontBaseBold
+  
+.wrapper
+  position relative
+  width 100%
+  height 100%
+  height 100vh
+  display block
+
+@css {
+  .wrapper {
+    background: rgba(11,229,102,1);
+    background: -moz-linear-gradient(left, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(11,229,102,1)), color-stop(1%, rgba(11,229,102,1)), color-stop(56%, rgba(19,217,164,1)), color-stop(100%, rgba(3,234,255,1)));
+    background: -webkit-linear-gradient(left, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
+    background: linear-gradient(to right, rgba(11,229,102,1) 0%, rgba(11,229,102,1) 1%, rgba(19,217,164,1) 56%, rgba(3,234,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0be566', endColorstr='#03eaff', GradientType=1 );
+  }
+}
+
+section
+  width 100%
+  max-width 870px
+  min-width 320px
+  margin 0 auto
+  position relative
+  border 1px solid red
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
