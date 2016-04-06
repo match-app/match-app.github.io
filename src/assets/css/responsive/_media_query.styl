@@ -1,56 +1,50 @@
 @import 'nib'
 
-@media (min-width: 320px) and (max-width: 568px)
+//320px 568px
+@media (min-width: 20.000em) and (max-width: 35.500em)
   footer div
     width 98%
-    
   .step-app div
     width 100%
-    padding-top 20px
-    
+    padding-top 20px    
   .step-app .mockup
     width 80%
-    
   .step-app div p
     font-size 1.500em
-  
   .avise-me
     padding 5em 0 0 1.375em
-    
     & h2
       font-size 2.2em
-      
     & input
       width 55%
-    
     & .btn-enviar
       width 43%
       position relative
       top 2px
   .hand
     width 45%
-  
   .simples
     padding 0
     & h2
-      font-size 3em
+      font-size 2.500em
       margin 0.400em 0 0.400em 0
     & p
-      padding 0.400em
+      padding 0.100em
     
-
-@media (min-width: 600px) and (max-width: 800px)
+//600px 800px
+@media (min-width: 37.500em) and (max-width: 50.000em)
   .hand
     width 30%
-  
   .avise-me
     padding 5em 0 0 1.375em
     & h2
       font-size 2.2em
+    & input
+      width 55%
     & .btn-enviar
+      width 43%
       position relative
-      top 2px  
-  
+      top 2px
   .simples
     padding 0
     & h2
@@ -58,4 +52,55 @@
       margin 0.400em 0 0.400em 0
     & p
       padding 0.400em
+  .step-app .mockup
+    width 70%
+
+//800px 600px
+@media (min-width: 50.000em) and (max-width: 37.500em)
+  .hand
+    width 30%
+  .avise-me
+    padding 5em 0 0 1.375em
+    & h2
+      font-size 2.2em
+    & input
+      width 55%
+    & .btn-enviar
+      width 43%
+      position relative
+      top 2px
+  .simples
+    padding 0
+    & h2
+      font-size 3em
+      margin 0.400em 0 0.400em 0
+    & p
+      padding 0.400em
+  .step-app .mockup
+    width 70%
+    
+
+//360px 640px - Moto G III
+@media (min-width: 22.500em) and (max-height: 40.000em) and (-webkit-device-pixel-ratio: 2)
+  .hand
+    width 30%
+  .avise-me
+    padding 5em 0 0 1.375em
+    & h2
+      font-size 2.2em
+    & input
+      width 55%
+    & .btn-enviar
+      width 43%
+      position relative
+      top 2px
+  .simples
+    padding 0
+    & h2
+      font-size 3em
+      margin 0.400em 0 0.400em 0
+    & p
+      padding 0.400em
+  .step-app .mockup
+    width 70%
     
