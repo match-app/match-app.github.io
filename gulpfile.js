@@ -12,8 +12,7 @@ var gulp = require('gulp')
   , minifycss = require('gulp-minify-css')
   , nib = require('nib')
   , header = require('gulp-header')
-  , notify = require('gulp-notify')
-  , ghPages = require('gulp-gh-pages');
+  , notify = require('gulp-notify');
 
 var config = {
   port: 3000,

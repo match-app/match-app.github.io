@@ -3,6 +3,7 @@ node_modules/
 npm-debug.log
 logs
 public
+www/
 
 # Mac OS X
 .DS_Store
