@@ -24,6 +24,9 @@ var config = {
     , css: [
       './src/assets/css/**/*.styl'
     ]
+    , js: [
+      './src/assets/js/**/*.js'
+    ]
     , img: './src/assets/images/**/*'
     , fonts: './src/assets/fonts/**/*'
     , dist: './'
@@ -44,12 +47,6 @@ gulp.task('open', ['connect'], () => {
     .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
 
-/*gulp.task('html', () => {
-  gulp.src(config.paths.html)
-    .pipe(gulp.dest(config.paths.dist))
-    .pipe(connect.reload())
-    .pipe(notify('HTML OK!'));
-}); */
 
 gulp.task('html', () => {
   return gulp.src(config.paths.html+'.html')
@@ -69,6 +66,15 @@ gulp.task('css', () => {
     .pipe(notify('CSS OK!'));
 });
 
+gulp.task('js', () => {
+  gulp.src(config.paths.js)
+    .pipe(uglify())
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest(config.paths.dist + '/assets/js'))
+    .pipe(connect.reload())
+    .pipe(notify('JS OK!'));;
+});
+
 gulp.task('images', () => {
   return gulp.src(config.paths.img)
     .pipe(imagemin({
@@ -86,11 +92,13 @@ gulp.task('fonts', () => {
 
 gulp.task('watch', () => {
   gulp.watch(config.paths.html, ['html']);
+  gulp.watch(config.paths.js, ['js']);
   gulp.watch(config.paths.css, ['css']);
 });
 
 gulp.task ('default',[
   'html'
+  , 'js'
   , 'images'
   , 'fonts'
   , 'css'
