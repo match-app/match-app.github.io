@@ -12,7 +12,8 @@ var gulp = require('gulp')
   , minifycss = require('gulp-minify-css')
   , nib = require('nib')
   , header = require('gulp-header')
-  , notify = require('gulp-notify');
+  , notify = require('gulp-notify')
+  , htmlmin = require('gulp-htmlmin');
 
 var config = {
   port: 3000,
@@ -43,8 +44,16 @@ gulp.task('open', ['connect'], () => {
     .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
 
-gulp.task('html', () => {
+/*gulp.task('html', () => {
   gulp.src(config.paths.html)
+    .pipe(gulp.dest(config.paths.dist))
+    .pipe(connect.reload())
+    .pipe(notify('HTML OK!'));
+}); */
+
+gulp.task('html', () => {
+  return gulp.src(config.paths.html+'.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(config.paths.dist))
     .pipe(connect.reload())
     .pipe(notify('HTML OK!'));
