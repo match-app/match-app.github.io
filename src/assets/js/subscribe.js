@@ -1,4 +1,12 @@
 ;(function() {
+  document.getElementById("subscribe-header").addEventListener("click", function() {
+    fbq('track','CompleteRegistration')
+  });
+
+  document.getElementById("subscribe-footer").addEventListener("click", function() {
+    fbq('track','CompleteRegistration');
+  });
+
   var formHeader = document.querySelector('.subscribe-form-header');
   formHeader.onsubmit = valid;
 
@@ -18,4 +26,5 @@
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email)
   }
+
 })();
