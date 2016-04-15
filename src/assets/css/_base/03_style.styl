@@ -15,10 +15,8 @@ body
   width 100%
   height 100%
   overflow-x hidden
-  
-.fade-in-page
   animation fade-in ease-in 2s both
-  
+
 @keyframes fade-in {
   0% {
     opacity: 0
@@ -42,6 +40,14 @@ h2
 
 h2 strong
   font-family $fontBaseBold
+
+.blind
+  position absolute
+  left -10000px 
+  top auto 
+  width 1px 
+  height 1px 
+  overflow hidden
 
 .form-erro
   border 2px solid #F1634B !important

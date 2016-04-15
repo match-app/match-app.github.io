@@ -13,7 +13,9 @@ var gulp = require('gulp')
   , nib = require('nib')
   , header = require('gulp-header')
   , notify = require('gulp-notify')
-  , htmlmin = require('gulp-htmlmin');
+  , htmlmin = require('gulp-htmlmin')
+  , path = require('path')
+  , svgSprite = require('gulp-svg-sprite');
 
 var config = {
   port: 3000,
