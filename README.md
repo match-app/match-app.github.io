@@ -1,6 +1,6 @@
 # Matchapp
 
-This is the http://matchapp.com.br landing page repository.
+This is the http://matchapp.club landing page repository.
 
 ## Setup
 
