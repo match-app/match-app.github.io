@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp = require('gulp')
+const gulp = require('gulp')
   , connect = require('gulp-connect')
   , open = require('gulp-open')
   , concat = require('gulp-concat')
@@ -17,7 +17,7 @@ var gulp = require('gulp')
   , path = require('path')
   , svgSprite = require('gulp-svg-sprite');
 
-var config = {
+const config = {
   port: 3000,
   devBaseUrl: 'http://localhost',
 
