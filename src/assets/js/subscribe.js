@@ -1,18 +1,14 @@
 ;(function() {
-  document.getElementById("subscribe-header").addEventListener("click", function() {
-    fbq('track','CompleteRegistration')
-  });
-
   document.getElementById("subscribe-footer").addEventListener("click", function() {
     fbq('track','CompleteRegistration');
   });
 
-  var formHeader = document.querySelector('.subscribe-form-header');
+  var formHeader = document.querySelector('.subscribe-form-footer');
   formHeader.onsubmit = valid;
 
   function valid() {
     var isValid = !0,
-        inputEmail = document.querySelector('.subscribe-email-header');
+        inputEmail = document.querySelector('.subscribe-email');
     
     isValid = checkEmail(inputEmail.value);
     

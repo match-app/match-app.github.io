@@ -18,7 +18,7 @@ const gulp = require('gulp')
   , svgSprite = require('gulp-svg-sprite');
 
 const config = {
-  port: 3000,
+  port: 3001,
   devBaseUrl: 'http://localhost',
 
   paths: {
